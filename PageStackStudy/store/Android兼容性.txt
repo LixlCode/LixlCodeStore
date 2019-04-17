@@ -1,0 +1,220 @@
+关于Android的targetSDKVersion
+
+一. minSdkVersion、targetSdkVersion 和 maxSdkVersion
+	
+	1.android:minSdkVersion
+		一个用于指定应用运行所需最低API级别的整数。如果系统的API级别低于该属性中指定的值，Android系统将阻止用户安装应用。应该始终声明该属性。
+		注意：如果不声明该属性，系统将假定默认值为“1”，这表示您的应用兼容所有Android版本。如果您的应用并不兼容所有版本（例如，它使用API级别3中引入的API），并且您尚未声明正确的minSdkVersion，则当应用安装在API级别小于3的系统上时，应用将在运行时，尝试访问不可用的API时发生崩溃。因此，请务必在minSdkVersion属性中声明合适的API级别。
+	2.android:targetSdkVersion
+		一个用于指定应用的目标API级别的整数。如果未设置，其默认值与为minSdkVersion指定的值相等。
+		该属性用于通知系统，您已针对目标版本进行测试，并且系统不应启用任何兼容性行为来保持您的应用与目标版本的向前兼容性。应用仍可在较低版本上运行（最低版本为minSdkVersion）。
+		在Android随着每个新版本的推出而进化的过程中，一些行为甚至是外观可能会发生变化。不过，如果平台的API级别高于您的应用的targetSdkVersion所声明的版本，系统就可以通过启用兼容性行为来确保您的应用继续以您所期望的方式工作。您可以通过将targetSdkVersion指定为与应用所运行平台的API级别一致来停用此类兼容性行为。	
+	3.android:maxSdkVersion
+		一个指定作为应用设计运行目标的最高API级别的整数。
+		如果应用的maxSdkVersion属性低于系统本身使用的API级别，系统均不允许安装应用。在系统更新后重新验证这种情况下，这实际上相当于将您的应用从设备中移除。
+		警告：不建议声明该属性。首先，没有必要设置该属性，将其作为阻止您的应用部署到Android平台新发布版本上的一种手段。从设计上讲，新版本平台完全向后兼容。只要您的应用只使用标准API并遵循部署最佳实践，应该能够在新版本平台上正常工作。其次，请注意在某些情况下，声明该属性可能导致您的应用在系统更新至更高API级别后被从用户设备中移除。	
+	说明：
+		通过整数形式的API级别表示应用与一个或多个版本的Android平台的兼容性。应用表示的API级别将与Android系统的API级别进行比较，其结果在不同Android设备上可能有所差异。API级别始终是单个整数，该元素实际上是用于指定API级别，而不是SDK（软件开发工具包）或Android平台的版本号。	
+	
+		
+		
+二. android:targetSdkVersion更新为23引发的“惨案”
+
+	1.前言
+		targetSdkVersion所暗示的许多行为变化都记录在VERSION_CODES文档中了，例如，Android6.0变化文档中谈了target为API23时会如何把你的应用转换到运行时权限模型上。由于某些行为的变化对用户是非常明显的，所以将target更新为最新的SDK是所有应用都应该优先处理的事情。
+	2.“案情”描述
+		targetSdkVersion是Android提供向前兼容的主要依据，在应用的targetSdkVersion没有更新之前系统不会应用最新的行为变化。新beta版本，targetSdkVersion改成了23，在测试中，发现和更新targetSdkVersion相关的严重问题，至今心有余悸，总结自警，并将有关内容分享如下：
+		①我的资产页面，图片下载出现了问题：
+			app中有模块对https、http请求混合使用（https的web页面，图片是http的请求），受到影响，高版本系统不支持页面混合加载，开发兼容优化代码解决；
+		②后台service的调用出现问题：
+			测试回归，发现升级出现了问题，android显示5.0以上版本，service必须显示调用，开发已修改service为显示调用；
+		③pushsdk无法生成token，无法推送：
+			测试回归发现，客户端安装后无法生成token，替换pushsdk，修复在targetsdkversion高于22，system.settings设置需要权限导致push不可用
+		④新beta版本，targetSdkVersion，改成了23，屏幕高亮功能，受影响，
+		
+		
+三. 关于targetSDKVersion=26适配8.0以上的一些坑
+
+	1.系统弹窗（悬浮窗）不生效：
+		项目里使用了SYSTEM_ALERT_WINDOW     权限弹了在service里面设置了dialog的TYPE_SYSTEM_ALERT的
+		悬浮窗，发现不好用。解决办法：
+		如果应用使用 SYSTEM_ALERT_WINDOW 权限并且尝试使用以下窗口类型之一来在其他应用和系统窗口上方显示提醒窗口：
+		TYPE_PHONE
+		TYPE_PRIORITY_PHONE
+		TYPE_SYSTEM_ALERT
+		TYPE_SYSTEM_OVERLAY
+		TYPE_SYSTEM_ERROR
+		请用TYPE_APPLICATION_OVERLAY 替换
+		dialog.getWindow().setType((WindowManager.LayoutParams.TYPE_APPLICATION_OVERLAY));
+		
+	2.通知不生效：	
+		项目里用到了通知提醒，提升后8.0的机器上也不好用了。查阅API发现，原来的
+		new NotificationCompat.Builder(this)升到8.0后被弃用了，改为了：new NotificationCompat.Builder(this,String channelId)
+		而channelId的设置如下：
+		String id = "channel_1";
+		String description = "123";
+		int importance = NotificationManager.IMPORTANCE_LOW;
+		NotificationChannel mChannel = new NotificationChannel(id, "123", importance);
+		  mChannel.setDescription(description);
+		  mChannel.enableLights(true);
+		  mChannel.setLightColor(Color.BLUE);
+		  mChannel.enableVibration(true);
+		  mChannel.setVibrationPattern(new long[]{100, 200, 300, 400, 500, 400, 300, 200, 400});
+		notificationManager.createNotificationChannel(mChannel);
+
+		如果不生成channel，直接填入一个id会不生效的。所以升到26的同学适配8.0机型的时候一定要注意这两个问题，要
+		if(Build.VERSION.SDK_INT>=26){} else{}。判断分别设置的。 
+	
+【适配Android O之适配Notification】
+	将targetSdkVersion提到26以上的话，就必须为Notification设置channel了，不能为null。
+	Notification渠道号的使用，适配Android O
+	
+    import android.app.Notification;  
+    import android.app.NotificationChannel;  
+    import android.app.NotificationManager;  
+    import android.content.Context;  
+    import android.content.ContextWrapper;  
+    import android.os.Build;  
+    import android.support.v4.app.NotificationCompat;  
+      
+    public class NotificationUtils extends ContextWrapper {  
+      
+        private NotificationManager manager;  
+        public static final String id = "channel_1";  
+        public static final String name = "channel_name_1";  
+      
+        public NotificationUtils(Context context){  
+            super(context);  
+        }  
+      
+        public void createNotificationChannel(){  
+            NotificationChannel channel = new NotificationChannel(id, name, NotificationManager.IMPORTANCE_HIGH);  
+            getManager().createNotificationChannel(channel);  
+        }  
+        private NotificationManager getManager(){  
+            if (manager == null){  
+                manager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);  
+            }  
+            return manager;  
+        }  
+        public Notification.Builder getChannelNotification(String title, String content){  
+            return new Notification.Builder(getApplicationContext(), id)  
+                    .setContentTitle(title)  
+                    .setContentText(content)  
+                    .setSmallIcon(android.R.drawable.stat_notify_more)  
+                    .setAutoCancel(true);  
+        }  
+        public NotificationCompat.Builder getNotification_25(String title, String content){  
+            return new NotificationCompat.Builder(getApplicationContext())  
+                    .setContentTitle(title)  
+                    .setContentText(content)  
+                    .setSmallIcon(android.R.drawable.stat_notify_more)  
+                    .setAutoCancel(true);  
+        }  
+        public void sendNotification(String title, String content){  
+            if (Build.VERSION.SDK_INT>=26){  
+                createNotificationChannel();  
+                Notification notification = getChannelNotification  
+                        (title, content).build();  
+                getManager().notify(1,notification);  
+            }else{  
+                Notification notification = getNotification_25(title, content).build();  
+                getManager().notify(1,notification);  
+            }  
+        }  
+    }  		
+		
+		
+		
+	用法：
+		NotificationUtils notificationUtils = new NotificationUtils(this);  
+		notificationUtils.sendNotification("测试标题", "测试内容");  	
+
+
+创建快捷方式，兼容Android O及以上：	
+private void addShortcut() {
+ if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+	ShortcutManager scm = (ShortcutManager) getSystemService(SHORTCUT_SERVICE);
+	Intent launcherIntent = new Intent(Settings.ACTION_DATA_ROAMING_SETTINGS);//设置网络页面intent
+	ShortcutInfo si = new ShortcutInfo.Builder(this, "dataroam")
+		.setIcon(Icon.createWithResource(this, R.drawable.ic_perm_data_setting_black_24dp))
+		.setShortLabel("网络设置")
+		.setIntent(launcherIntent)
+		.build();
+	assert scm != null;
+	scm.requestPinShortcut(si, null);
+ } else {
+	  Intent addShortcutIntent = new Intent("com.android.launcher.action.INSTALL_SHORTCUT");//"com.android.launcher.action.INSTALL_SHORTCUT"
+	  // 不允许重复创建
+	  addShortcutIntent.putExtra("duplicate", false);// 经测试不是根据快捷方式的名字判断重复的
+	  // 应该是根据快链的Intent来判断是否重复的,即Intent.EXTRA_SHORTCUT_INTENT字段的value
+	  // 但是名称不同时，虽然有的手机系统会显示Toast提示重复，仍然会建立快链
+	  // 屏幕上没有空间时会提示
+	  // 注意：重复创建的行为MIUI和三星手机上不太一样，小米上似乎不能重复创建快捷方式
+	 
+	  // 名字
+	  addShortcutIntent.putExtra(Intent.EXTRA_SHORTCUT_NAME, "网络设置");
+	  // 图标
+	  addShortcutIntent.putExtra(Intent.EXTRA_SHORTCUT_ICON_RESOURCE,
+		Intent.ShortcutIconResource.fromContext(this, R.drawable.ic_perm_data_setting_black_24dp));
+	 
+	  // 设置关联程序
+	  Intent launcherIntent = new Intent(Settings.ACTION_DATA_ROAMING_SETTINGS);//设置网络页面intent
+	  // 设置关联程序
+	  //  Intent launcherIntent = new Intent(Intent.ACTION_MAIN);
+	  //  launcherIntent.setClass(MainActivity.this, MainActivity.class);
+	  //  launcherIntent.addCategory(Intent.CATEGORY_LAUNCHER);
+	  addShortcutIntent.putExtra(Intent.EXTRA_SHORTCUT_INTENT, launcherIntent);
+	 
+	  // 发送广播
+	  sendBroadcast(addShortcutIntent);
+	}
+}	
+	
+		
+// ==============add start by lixionglin for MirrorLink================
+    private static volatile MirrorLinkApplicationContext instance;
+    
+    private MirrorLinkApplicationContext(){}
+    
+    public static MirrorLinkApplicationContext getInstance(){
+        if (instance == null){
+            synchronized(MirrorLinkApplicationContext.class){
+                if (instance == null){
+                    instance = new MirrorLinkApplicationContext();
+                }
+            }
+        }
+        return instance;
+    }
+
+    public void init(Context context) {
+        
+    }
+
+    
+// =======================add end by lixionglin for MirrorLink==========================	
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		

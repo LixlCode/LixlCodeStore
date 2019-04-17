@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <FrameLayout
+        android:id="@+id/fl_tag"
+        android:layout_width="match_parent"
+        android:layout_height="180dp">
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/vp_view_page"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:clipChildren="false" />
+
+        <RadioGroup
+            android:id="@+id/rg_radio_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|bottom"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal" />
+
+    </FrameLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp_view_page_new"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_below="@+id/fl_tag"
+        android:paddingLeft="25dp"
+        android:paddingRight="25dp"
+        android:layout_marginTop="20dp"
+        android:clipToPadding="false">
+
+    </android.support.v4.view.ViewPager>
+
+    <TextView
+        android:id="@+id/tv_version"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Hello World!"
+        android:layout_above="@+id/rl_tag_1"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
+        android:padding="8dp"
+        android:lines="1"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/vp_view_page_new"/>
+
+    <RelativeLayout
+        android:id="@+id/rl_tag_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/bottom_bar_bg"
+        android:gravity="center"
+        android:padding="3dp"
+        android:layout_marginBottom="18dp">
+
+        <TextView
+            android:id="@+id/tv_hello_world"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:padding="6dp"
+            android:background="@drawable/wifi_limit_dialog_selector"
+            android:text="@string/app_version" />
+
+        <View
+            android:id="@+id/v_line_1"
+            android:layout_width="1dp"
+            android:layout_height="18dp"
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="6dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/tv_hello_world"
+            android:layout_toEndOf="@+id/tv_hello_world"
+            android:background="@color/gray"/>
+
+        <TextView
+            android:id="@+id/tv_update"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_toRightOf="@+id/v_line_1"
+            android:text="@string/app_update"
+            android:padding="6dp"
+            android:background="@drawable/wifi_limit_dialog_selector"
+            android:layout_toEndOf="@+id/v_line_1" />
+
+        <View
+            android:id="@+id/v_line_2"
+            android:layout_width="1dp"
+            android:layout_height="18dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/tv_update"
+            android:layout_toEndOf="@+id/tv_update"
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="6dp"
+            android:background="@color/gray"/>
+
+        <TextView
+            android:id="@+id/tv_terms"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:background="@drawable/wifi_limit_dialog_selector"
+            android:layout_toRightOf="@+id/v_line_2"
+            android:text="@string/app_terms"
+            android:padding="6dp"
+            android:layout_toEndOf="@+id/v_line_2" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

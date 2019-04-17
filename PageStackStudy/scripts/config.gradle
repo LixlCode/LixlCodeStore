@@ -1,0 +1,19 @@
+ext {
+    javaVersion = JavaVersion.VERSION_1_8       // java的版本
+    javaMaxHeapSize = '2G'                      // 编译所占用的最大内存
+
+    compileSdkVersion = 28                      // 用于编译的SDK版本
+    buildToolsVersion = "28.0.3"                // 用于Gradle编译项目的工具版本
+
+    minSdkVersion = 15                          // 最低支持Android版本
+    targetSdkVersion = 28                       // 目标版本
+
+    versionCode = 1                             // 版本号
+    versionName = "1.0.0"                       // 版本名称
+    applicationId = "com.store.stack"         // appID
+
+
+    dependencies = [
+            "foundation-page-stack" : project('foundation-page-stack')
+    ]
+}
