@@ -69,7 +69,6 @@ android {
             }
         }
     }
-
 }
 
 dependencies {
@@ -81,4 +80,11 @@ dependencies {
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
 
     implementation rootProject.ext.dependencies["foundation-page-stack"]
+
+    // flipper
+    debugImplementation 'com.facebook.flipper:flipper:0.14.1'
+    debugImplementation 'com.facebook.soloader:soloader:0.5.1'
+    debugImplementation 'com.squareup.leakcanary:leakcanary-android:1.6.1'
+    releaseImplementation 'com.squareup.leakcanary:leakcanary-android-no-op:1.6.1'
+    implementation 'com.squareup.okhttp3:okhttp:3.6.0'
 }
