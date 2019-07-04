@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 
+import com.store.stack.R;
 import com.store.stack.other.mode.MomCallbackImpl;
 import com.store.stack.other.mode.XiaoMing;
 import com.store.stack.other.observe.PersonalSubject;
@@ -13,12 +14,12 @@ import com.store.stack.other.wolf.BuLieLang;
 import com.store.stack.other.wolf.LangWang;
 import com.store.stack.other.wolf.ZhenchaLang;
 
-public class MainActivity extends AppCompatActivity {
+public class ModelTestActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.model_test_main);
 
         // 测试回到接口
         findViewById(R.id.tv_test_icallback).setOnClickListener(new View.OnClickListener() {
