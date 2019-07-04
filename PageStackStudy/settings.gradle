@@ -1,4 +1,4 @@
-include ':app', ':appAidlService', ':appAidlClient', ':observerModel'
+include ':app', ':appAidlService', ':appAidlClient'
 
 def include_foundation(String projectName, File projectDir) {
     include(projectName)
