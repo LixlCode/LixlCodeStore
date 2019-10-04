@@ -7,8 +7,4 @@
     <string name="app_update_info">立即更新</string>
     <string name="app_background_update">后台更新</string>
 
-
-    <string name="wifi_limit_hint_1">由于系统限制，无法自动开启wifi，请手动开启wifi!</string>
-    <string name="wifi_limit_hint_2">由于系统限制，无法自动关闭wifi，请手动关闭wifi!</string>
-
 </resources>

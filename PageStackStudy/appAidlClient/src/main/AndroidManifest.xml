@@ -34,17 +34,6 @@
             </intent-filter>-->
         </activity>
 
-        <provider
-            android:name=".HiCarLauncherContentProvider"
-            android:authorities="com.baidu.demo"
-            android:enabled="true"
-            android:exported="true"
-            android:permission="com.huawei.hicar.HICAR_PERMISSION">
-            <intent-filter>
-                <action android:name="com.huawei.hicar.ACTION_CARD_READY"/>
-            </intent-filter>
-        </provider>
-
     </application>
 
 </manifest>

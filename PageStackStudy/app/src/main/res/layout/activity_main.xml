@@ -73,7 +73,6 @@
             android:layout_marginLeft="8dp"
             android:layout_marginRight="8dp"
             android:padding="6dp"
-            android:background="@drawable/wifi_limit_dialog_selector"
             android:text="@string/app_version" />
 
         <View
@@ -96,7 +95,6 @@
             android:layout_toRightOf="@+id/v_line_1"
             android:text="@string/app_update"
             android:padding="6dp"
-            android:background="@drawable/wifi_limit_dialog_selector"
             android:layout_toEndOf="@+id/v_line_1" />
 
         <View
@@ -116,7 +114,6 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="8dp"
             android:layout_marginRight="8dp"
-            android:background="@drawable/wifi_limit_dialog_selector"
             android:layout_toRightOf="@+id/v_line_2"
             android:text="@string/app_terms"
             android:padding="6dp"

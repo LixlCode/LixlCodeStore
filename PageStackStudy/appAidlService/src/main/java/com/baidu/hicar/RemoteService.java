@@ -32,7 +32,7 @@ public class RemoteService extends Service {
             @Override
             public void run() {
                 Toast.makeText(getApplicationContext(),
-                        "Hello aidl", Toast.LENGTH_LONG).show();
+                        "Hello aidl，远程应用的方法执行了", Toast.LENGTH_LONG).show();
             }
         });
     }
