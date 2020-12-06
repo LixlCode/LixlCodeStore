@@ -1,0 +1,5 @@
+<resources>
+    <string name="module_name">page-stack</string>
+    <!-- 是否启用界面动画. -->
+    <item name="animation_enabled" type="bool">false</item>
+</resources>

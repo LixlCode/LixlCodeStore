@@ -1,0 +1,24 @@
+<resources>
+    <!--<string name="app_name">AndroidDemo</string>-->
+    <string name="app_name">唯美</string>
+
+    <string name="app_one">首页</string>
+    <string name="app_two">资讯</string>
+    <string name="app_three">生活</string>
+    <string name="app_four">商店</string>
+    <string name="app_five">我的</string>
+
+    <string name="experience">立即体验</string>
+
+    <!--toolBar上面的文字-->
+    <string name="action_edit">编辑</string>
+    <string name="action_share">分享</string>
+    <string name="action_more">更多</string>
+    <string name="action_more_img">拍照</string>
+    <string name="action_more_share">分享</string>
+    <string name="action_more_sao">付款</string>
+
+    <string name="expand">展开</string>
+    <string name="collapse">收起</string>
+    <string name="loading">正在加载中，请稍后....</string>
+</resources>

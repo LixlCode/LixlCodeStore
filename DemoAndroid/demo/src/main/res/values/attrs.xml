@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="TileView">
+        <attr name="src" format="reference" />
+    </declare-styleable>
+    <declare-styleable name="CircleProgressImageView">
+        <attr name="max" format="integer" />
+        <!-- 进度最大值 -->
+        <attr name="fill" format="boolean" />
+        <!-- 是否填充圆形区域 -->
+        <attr name="paint_width" format="reference|dimension" />
+        <!-- 画笔宽度，填充模式下无效，会被重置为0 -->
+        <attr name="paint_color" format="reference|color" />
+        <!-- 画笔颜色 -->
+        <attr name="inside_interval" format="reference|dimension" />
+        <!-- 圆形区域向里缩进的距离 -->
+        <attr name="text_color" format="reference|color" />
+        <!-- 字体颜色，默认黑色 -->
+    </declare-styleable>
+
+    <declare-styleable name="ViewPagerIndicator">
+
+        <!-- Style of the circle indicator. -->
+        <attr name="vpiCirclePageIndicatorStyle" format="reference" />
+        <!-- Style of the icon indicator's views. -->
+        <attr name="vpiIconPageIndicatorStyle" format="reference" />
+        <!-- Style of the line indicator. -->
+        <attr name="vpiLinePageIndicatorStyle" format="reference" />
+        <!-- Style of the title indicator. -->
+        <attr name="vpiTitlePageIndicatorStyle" format="reference" />
+        <!-- Style of the tab indicator's tabs. -->
+        <attr name="vpiTabPageIndicatorStyle" format="reference" />
+        <!-- Style of the underline indicator. -->
+        <attr name="vpiUnderlinePageIndicatorStyle" format="reference" />
+    </declare-styleable>
+
+    <attr name="centered" format="boolean" />
+    <attr name="selectedColor" format="color" />
+    <attr name="strokeWidth" format="dimension" />
+    <attr name="unselectedColor" format="color" />
+
+    <declare-styleable name="CirclePageIndicator">
+
+        <!-- Whether or not the indicators should be centered. -->
+        <attr name="centered" />
+        <!-- Color of the filled circle that represents the current page. -->
+        <attr name="fillColor" format="color" />
+        <!-- Color of the filled circles that represents pages. -->
+        <attr name="pageColor" format="color" />
+        <!-- Orientation of the indicator. -->
+        <attr name="android:orientation" />
+        <!-- Radius of the circles. This is also the spacing between circles. -->
+        <attr name="radius" format="dimension" />
+        <!-- Whether or not the selected indicator snaps to the circles. -->
+        <attr name="snap" format="boolean" />
+        <!-- Color of the open circles. -->
+        <attr name="strokeColor" format="color" />
+        <!-- Width of the stroke used to draw the circles. -->
+        <attr name="strokeWidth" />
+        <!-- View background -->
+        <attr name="android:background" />
+    </declare-styleable>
+
+    <item name="anim_duration_default" type="integer">200</item>
+
+    <declare-styleable name="SwitchRouteTopbar">
+        <attr name="imageOptionsVisibility">
+            <enum name="visible" value="0" />
+            <enum name="invisible" value="4" />
+            <enum name="gone" value="8" />
+        </attr>
+    </declare-styleable>
+
+	<declare-styleable name="SlidingUpPanelLayout">
+        <attr name="panelHeight" format="dimension" />
+        <attr name="shadowHeight" format="dimension" />
+        <attr name="paralaxOffset" format="dimension" />
+        <attr name="fadeColor" format="color" />
+        <attr name="flingVelocity" format="integer" />
+        <attr name="dragView" format="reference" />
+        <attr name="overlay" format="boolean"/>
+        <attr name="anchorPoint" format="float" />
+    </declare-styleable>
+
+    <declare-styleable name="DashView">
+        <attr name="dashOrientation" format="enum">
+            <enum name="horizontal" value="0" />
+            <enum name="vertical" value="1" />
+        </attr>
+        <attr name="dashGap" format="dimension" />
+        <attr name="dashWidth" format="dimension" />
+    </declare-styleable>
+    <declare-styleable name="CircleImageView">
+        <attr name="border_width" format="dimension" />
+        <attr name="border_color" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="defaultlayout">
+        <attr name="pageSign" format="string" />
+    </declare-styleable>
+
+    <declare-styleable name="BMCheckBox">
+        <attr name="check" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="CircleProgressBar">
+        <attr name="line_count" format="integer"/>
+        <attr name="draw_progress_text" format="boolean"/>
+        <attr name="line_width" format="dimension|reference"/>
+        <attr name="progress_start_color" format="color|reference"/>
+        <attr name="progress_end_color" format="color|reference"/>
+        <attr name="progress_text_color" format="color|reference"/>
+        <attr name="progress_text_size" format="dimension|reference"/>
+        <attr name="progress_stroke_width" format="dimension|reference"/>
+        <attr name="progress_background_color" format="color|reference"/>
+        <attr name="progress_text_format_pattern" format="string|reference"/>
+
+        <attr name="style">
+            <enum name="line" value="0"/>
+            <enum name="solid" value="1"/>
+            <enum name="solid_line" value="2"/>
+        </attr>
+
+        <attr name="progress_shader">
+            <enum name="linear" value="0"/>
+            <enum name="radial" value="1"/>
+            <enum name="sweep" value="2"/>
+        </attr>
+
+        <attr name="progress_stroke_cap">
+            <enum name="butt" value="0"/>
+            <enum name="round" value="1"/>
+            <enum name="square" value="2"/>
+        </attr>
+
+    </declare-styleable>
+    <!--城市切换 IndexBar-->
+    <attr name="indexBarTextSize" format="dimension" />
+
+    <declare-styleable name="IndexBar">
+        <attr name="indexBarTextSize" />
+        <attr name="indexBarPressBackground" format="color" />
+    </declare-styleable>
+
+
+    <declare-styleable name="DropDownMenu">
+        <!--下划线颜色-->
+        <attr name="underlineColor" format="color" />
+        <!--分割线颜色(菜单栏)-->
+        <attr name="dividerColor" format="color" />
+        <!--tab选中颜色-->
+        <attr name="textSelectedColor" format="color" />
+        <!--tab未选中颜色-->
+        <attr name="textUnselectedColor" format="color" />
+        <!--tab 背景颜色-->
+        <attr name="menuBackgroundColor" format="color" />
+        <!--遮罩颜色，一般是半透明-->
+        <attr name="maskColor" format="color" />
+        <!--字体大小-->
+        <attr name="menuTextSize" format="dimension" />
+        <!--tab选中状态图标-->
+        <attr name="menuSelectedIcon" format="reference" />
+        <!--tab未选中状态图标-->
+        <attr name="menuUnselectedIcon" format="reference" />
+    </declare-styleable>
+</resources>

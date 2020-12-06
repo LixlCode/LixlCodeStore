@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:background="#FFFFFF"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <com.wecome.demo.view.CustomGraphic
+        android:id="@+id/user_navi_card"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/user_navi_card_default"
+        android:layout_centerInParent="true"
+        android:gravity="center_vertical"
+        android:paddingRight="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/user_navi_card_default"/>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:textSize="16dp"
+                android:textColor="#333333"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="你已经30天没导航了"/>
+
+            <TextView
+                android:textSize="12dp"
+                android:textColor="#999999"
+                android:layout_marginTop="6dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="导航让你省下时间去做更有意义的事"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/navi_card_detail"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="出行回顾"
+        android:textColor="#ff999999"
+        android:textSize="13dp"
+        android:drawablePadding="5dp"
+        android:visibility="gone"
+        android:drawableRight="@mipmap/common_icon_next_arrow"/>
+</RelativeLayout>

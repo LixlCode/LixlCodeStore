@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.wecome.demo.view.HomeItemView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:baidu="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:gravity="center"
+    android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/tools_button_offline_maps"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/home_list_selector">
+
+                <!--<com.baidu.mapframework.widget.AsyncImageView
+                    android:id="@+id/item_icon"
+                    style="@style/user_center_func_icon_style"
+                    android:layout_centerHorizontal="true"
+                    baidu:loading="false"
+                    baidu:scaleType="fitXY" />-->
+
+                <ImageView
+                    android:id="@+id/item_icon"
+                    style="@style/user_center_func_icon_style"
+                    android:layout_centerHorizontal="true"/>
+
+                <TextView
+                    android:id="@+id/item_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/item_icon"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/user_center_page_offline_maps"
+                    android:paddingBottom="15dp"
+                    android:textColor="#333333"
+                    android:textSize="12dp" />
+
+
+                <TextView
+                    android:id="@+id/icon_newpot"
+                    android:layout_width="28dp"
+                    android:layout_height="14dp"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_toRightOf="@id/item_icon"
+                    android:background="@mipmap/user_center_common_rednew"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:textSize="10dp"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/icon_redpot"
+                    android:layout_width="6dp"
+                    android:layout_height="6dp"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginTop="18dp"
+                    android:layout_toRightOf="@id/item_icon"
+                    android:background="@mipmap/icon_offline_maps_redpot"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:textSize="10dp"
+                    android:visibility="gone" />
+        </RelativeLayout>
+
+</com.wecome.demo.view.HomeItemView>

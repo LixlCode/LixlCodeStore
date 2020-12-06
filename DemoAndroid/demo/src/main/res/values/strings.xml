@@ -1,0 +1,125 @@
+<resources>
+    <string name="app_name">微创</string>
+
+    <string name="tab_1">首页</string>
+    <string name="tab_2">创新</string>
+    <string name="tab_3">我的</string>
+
+    <string name="home">Home</string>
+    <string name="set">Set</string>
+    <string name="feasible">Feasible</string>
+
+    <!--toolBar上面的文字-->
+    <string name="action_edit">编辑</string>
+    <string name="action_share">分享</string>
+    <string name="action_more">更多</string>
+    <string name="action_more_img">拍照</string>
+    <string name="action_more_share">分享</string>
+    <string name="action_more_sao">付款</string>
+
+
+    <!-- 设置页 -->
+    <string name="setting_keep_awake">屏幕常亮</string>
+    <string name="setting_recieve_msg">消息通知</string>
+    <string name="setting_recieve_msg_1">关闭后将无法接收新消息通知</string>
+    <string name="setting_recieve_msg_2">开启后接收新消息通知</string>
+    <string name="setting_revolve_map">旋转手势开关</string>
+    <string name="setting_revolve_map_1">图区双指旋转触发</string>
+    <string name="setting_change_viewpoint">切换视角开关</string>
+    <string name="setting_change_viewpoint_1">图区双指垂直上下滑动切换</string>
+    <string name="setting_auto_update">WLAN下自动更新</string>
+    <string name="setting_auto_update_1">自动更新已下载的离线地图包</string>
+    <string name="setting_shake_voice">"摇一摇"语音查询</string>
+    <string name="voice_upload_contacts">自动同步通讯录到词库</string>
+    <string name="voice_upload_contacts_detail">提高拨打电话语音识别成功率</string>
+    <string name="setting_voice_wakeup">说“小度小度”唤醒智能语音</string>
+    <string name="setting_common_address_layer_show">地图上显示常用地址</string>
+    <string name="setting_dig_common_address_show">显示推荐的常用地址</string>
+    <string name="setting_voice_wakeup1">解放双手，语音全面操控地图</string>
+    <string name="setting_route_condition">通知栏查看回家去公司路况</string>
+    <string name="setting_shake_voice_1">地图首页摇晃手机快速语音查询</string>
+    <string name="setting_home_config">设置家和公司</string>
+    <string name="setting_navi_config">导航设置</string>
+    <string name="setting_voice_config">语音设置</string>
+    <string name="setting_privacy_config">隐私设置</string>
+    <string name="setting_account_manager">帐号与安全</string>
+    <string name="setting_choose_sd">数据存储位置</string>
+    <string name="setting_reset_map">重置地图</string>
+    <string name="setting_about">关于</string>
+    <string name="setting_new_function">新功能介绍</string>
+    <string name="setting_roadcondition_pre_switch">路况预测开关</string>
+    <string name="setting_roadcondition_pre_switch_desc">地图首页，点击路况按钮，查看预测路况</string>
+    <string name="setting_voice__user_help">使用帮助及隐私设置指引</string>
+    <string name="setting_bubble_show">首页出行提示框</string>
+    <string name="setting_bubble_des">地图首页回家、去公司、行程等提示框</string>
+
+
+    <string name="setting_sao">扫一扫</string>
+    <string name="setting_look">看一看</string>
+    <string name="setting_search">搜一搜</string>
+    <string name="setting_sug">吐槽反馈</string>
+    <string name="setting_security">安全中心</string>
+    <string name="setting_we">我们</string>
+    <string name="setting_update">软件更新设置</string>
+
+
+    <!-- Home Page -->
+    <string name="user_center_page_offline_maps">离线地图</string>
+    <string name="user_center_tools_button_audio_gpg">导航语音包</string>
+    <string name="user_center_stop_car_help">停车助手</string>
+    <string name="user_center_running_route">跑步路线</string>
+    <string name="user_center_charge_pile_map">充电桩地图</string>
+    <string name="user_center_park_helper">停车助手</string>
+    <string name="user_center_change_theme">主题</string>
+    <string name="user_center_schedule_tools">行程助手</string>
+    <string name="user_center_car_services">车主服务</string>
+    <string name="user_center_measure_distance">测距</string>
+    <string name="user_center_live_room">直播间</string>
+    <string name="user_center_news_paper">出行早晚报</string>
+    <string name="user_center_fav">收藏夹</string>
+    <string name="user_center_addr">常用地址</string>
+    <string name="user_center_track">足迹</string>
+    <string name="user_center_share_bike_tools">共享单车</string>
+    <string name="user_center_tools_order_car">打车</string>
+    <string name="user_center_tools_voice">小度玩法</string>
+    <string name="user_center_auto_connect">连接车机</string>
+    <string name="user_center_check_violation">违章查询</string>
+
+    <string name="tools_activity">活动专区</string>
+    <string name="tools_navi_download">离线导航包</string>
+    <string name="tools_navi_download_1">下载后，不开网络也能查路线，离线导航。</string>
+    <string name="tools_exitap">关闭百度地图</string>
+    <string name="tools_navi_voice">导航语音</string>
+
+    <string name="user_sys_signin">签&#160;&#160;到</string>
+    <string name="my_youhui">优惠劵</string>
+    <string name="my_measure_distance">测距</string>
+    <string name="tools_offline">离线地图</string>
+    <string name="tools_offline_1">下载后，没网也能搜地点，看地图。</string>
+    <string name="my_offline_download">离线包下载</string>
+    <string name="login_or_register">注册/登录</string>
+    <string name="my_collect">收藏夹</string>
+    <string name="my_collect_route_invalid">该收藏路线失效，请重新收藏或删除</string>
+    <string name="my_set_home">常用地址</string>
+    <string name="exit_login">退出登录</string>
+    <string name="wallet_login_fail">登录失败，请重试。</string>
+    <string name="my_contribution">我的贡献</string>
+    <string name="my_navprotect">导航保障</string>
+    <string name="my_traffic_num">交通号</string>
+    <string name="my_business">我是商家</string>
+    <string name="my_freeusenet">免流量特权</string>
+    <string name="my_help">帮助与反馈</string>
+    <string name="my_setting">设置</string>
+    <string name="my_message">我的消息</string>
+    <string name="msg_subscribe">消息管理</string>
+    <string name="subscribe">消息管理</string>
+    <string name="subscribe_notice">您可以在这选择要接收的消息</string>
+    <string name="subscribe_close">该类消息通知已关闭，开启后即可接收消息</string>
+    <string name="subscribe_on">当前栏目消息通知已开启</string>
+    <string name="subscribe_push_on">消息将在"系统通知栏"里显示</string>
+    <string name="subscribe_push_close">消息将不会在"系统通知栏"里显示</string>
+    <string name="subscribe_disable">由于您手机系统的原因，该功能暂不支持。如果您需要关闭推送，请去手机设置中关闭。</string>
+
+    <item name="user_international_tag" type="id"></item>
+
+</resources>

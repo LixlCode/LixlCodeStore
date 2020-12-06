@@ -1,0 +1,9 @@
+include ':app', ':demo'
+
+def include_foundation(String projectName, File projectDir) {
+    include(projectName)
+    project(projectName).projectDir = projectDir
+}
+
+include_foundation(':foundation-page-stack', file('dependence/foundation/page-stack'))
+include_foundation(':foundation-map-webview', file('dependence/foundation/map-webview'))

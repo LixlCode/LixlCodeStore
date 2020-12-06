@@ -23,12 +23,6 @@
             </intent-filter>
         </service>
 
-        <service android:name=".BRemoteService">
-            <intent-filter>
-                <action android:name="com.baidu.hicar"/>
-            </intent-filter>
-        </service>
-
     </application>
 
 </manifest>

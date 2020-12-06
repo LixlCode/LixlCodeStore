@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+
+    <color name="gray">#A8A8A8</color>
+    <color name="red">#ff0000</color>
+    <color name="black">#000000</color>
+    <color name="white">#ffffff</color>
+    <color name="text">#666666</color>
+    <color name="orange">#FA7C20</color>
+
+    <!--Status bar color-->
+    <color name="statusColor">#A80000</color>
+    <!-- toolBar color -->
+    <color name="toolBarColor">#ff0000</color><!--0000ff-->
+    <!--EditText,RadioButton,CheckBox color-->
+    <color name="editColor">#FD87A9</color>
+    <!--Window color-->
+    <color name="widowColor">#ffffff</color>
+    <color name="line_color">#e0e0e0</color>
+
+    <!--loading颜色-->
+    <color name="triangle">#aa72d572</color>
+    <color name="circle">#aa738ffe</color>
+    <color name="rect">#aae84e40</color>
+    <color name="view_bg">#00000000</color>
+    <color name="shadow">#25808080</color>
+    <color name="dialog_bg">#f5f5f5</color>
+
+
+    <color name="menu_bg">#4f4f4f</color>
+    <color name="common_background">#f2f2f2</color>
+
+
+    <!--home-->
+    <color name="user_center_line_color">#eaeaea</color>
+
+</resources>

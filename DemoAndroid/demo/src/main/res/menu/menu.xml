@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_search"
+        android:icon="@android:drawable/ic_menu_search"
+        android:title="搜索一下"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/action_notification"
+        android:icon="@android:drawable/ic_menu_compass"
+        android:title="扫码付款"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_settings"
+        android:icon="@android:drawable/ic_menu_camera"
+        android:title="设置一下"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_about"
+        android:icon="@android:drawable/ic_menu_crop"
+        android:title="关于我们"
+        app:showAsAction="never" />
+</menu>

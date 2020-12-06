@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_app_desc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="6dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="简介："
+            android:textColor="@color/colorAccent"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_app_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:ellipsize="end"
+            android:maxLines="7"
+            android:text="应用的详细的描述应用的详细的描述应用的详细的描述应用的详细的描述应用的详细的描述应用的详细的描述应用的详细的描述应用的详细的描述应用的详细的描述应用的详细的描述应用的详细的描述应用的详细的描述应用的详细的描述应用的详细的描述应用的详细的描述应用的详细的描述应用的详细的描述应用的详细的描述应用的详细的描述应用的详细的描述应用的详细的描述应用的详细的描述应用的详细的描述应用的详细的描述应用的详细的描述应用的详细的描述应用的详细的描述应用的详细的描述应用的详细的描述应用的详细的描述应用的详细的描述应用的详细的描述应用的详细的描述应用的详细的描述应用的详细的描述应用的详细的描述应用的详细的描述应用的详细的描述应用的详细的描述应用的详细的描述应用的详细的描述应用的详细的描述应用的详细的描述应用的详细的描述应用的详细的描述应用的详细的描述应用的详细的描述应用的详细的描述应用的详细的描述应用的详细的描述应用的详细的描述应用的详细的描述应用的详细的描述应用的详细的描述"
+            android:textColor="@color/colorPrimary"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:id="@+id/iv_app_desc_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="6dp"
+            android:layout_marginTop="6dp"
+            android:src="@mipmap/arrow_down" />
+
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="6dp"
+        android:background="@color/line_color"
+        android:padding="8dp">
+
+        <ImageView
+            android:id="@+id/iv_comment_head"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="5dp"
+            android:scaleType="fitCenter"
+            android:src="@mipmap/ic_launcher" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_comment_nick"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="用户的昵称" />
+
+            <TextView
+                android:id="@+id/tv_comment_des"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="评论的内容评论的内容评论的内容评论的内容评论的内容评论的内容评论的内容评论的内容" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!--<View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#33000000"
+        android:layout_marginTop="6dp"/>-->
+</LinearLayout>

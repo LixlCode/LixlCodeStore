@@ -1,0 +1,30 @@
+/**
+ Android开发的应该都见过 buildToolsVersion、compileSdkVersion、minSdkVersion 以及 targetSdkVersion。
+ ①、compileSdkVersion和minSdkVersion比较好理解，前者表示编译的SDK版本，就是运行我们这个项目的需要的android SDK版本，后者是最低适配的SDK版本。
+ ②、buildToolsVersion: android构建工具的版本，其中包括了打包工具aapt、dx等等。这个工具的目录位于：你的sdk路径/build-tools/XX.XX.XX，通过SDK Manager 更新；
+ ③、targetSdkVersion，字面的意思是目标SDK版本，但是它不仅仅是目标SDK字面意思这么简单。很难 一句话说清楚。
+    原文中用了『interesting』这个单词来描述targetSdkVersion。原文中是这样讲的：targetSdkVersion is the main way Android provides forward compatibility。
+    意思是targetSdkVersion是Android系统提供向前兼容的主要手段。随着Android系统的升级，
+    某个系统的API或者模块的行为可能会发生改变，但是，只要APK的targetSdkVersion不变，
+    即使这个APK安装在新Android系统上，其行为还是保持老的系统上的行为，这样就保证了系统对老应用的向前兼容性。
+ */
+ext {
+    javaVersion = JavaVersion.VERSION_1_8       // java的版本
+    javaMaxHeapSize = '2G'                      // 编译所占用的最大内存
+
+    compileSdkVersion = 28                      // 用于编译的SDK版本
+    buildToolsVersion = "28.0.3"                // 用于Gradle编译项目的工具版本
+
+    minSdkVersion = 15                          // 最低支持Android版本
+    targetSdkVersion = 28                       // 目标版本
+
+    versionCode = 1                             // 版本号
+    versionName = "1.0.0"                       // 版本名称
+    applicationId = "com.wecome.simulatemap"    // appID
+
+    dependencies = [
+            "foundation-page-stack"         : project('foundation-page-stack'),
+            "foundation-map-webview"        : project('foundation-map-webview')
+    ]
+
+}

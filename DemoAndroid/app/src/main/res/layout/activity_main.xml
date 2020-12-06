@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.MainActivity">
+
+    <!--
+    ?attr/actionBarSize:表示根据屏幕的分辨率采用系统默认的高度
+    如果低版本也要使用的话,则需要使用v7包的,否则只有api21上才能有效
+    -->
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/tb_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        app:contentInsetLeft="0dp"
+        app:contentInsetStart="0dp"
+        app:contentInsetStartWithNavigation="0dp"
+        app:layout_scrollFlags="enterAlways|scroll"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:title="唯美"
+        app:titleTextColor="@color/black">
+
+        <!--添加Toolbar的子控件-->
+        <!--<Button
+            android:id="@+id/btn_diy"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:text="自定"
+            android:textColor="#000000"
+            android:textSize="12sp"
+            android:background="@color/toolBarColor"/>-->
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="首页"
+            android:textColor="@android:color/black"
+            android:textSize="20sp" />
+    </android.support.v7.widget.Toolbar>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp_viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+    </android.support.v4.view.ViewPager>
+
+    <RadioGroup
+        android:id="@+id/rg_content_Buttom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/gray">
+
+        <RadioButton
+            android:id="@+id/rb_home"
+            style="@style/bottom_style"
+            android:drawableTop="@drawable/bottom_home_selector"
+            android:text="@string/app_one" />
+
+        <RadioButton
+            android:id="@+id/rb_newscenter"
+            style="@style/bottom_style"
+            android:drawableTop="@drawable/bottom_newscenter_selector"
+            android:text="@string/app_two" />
+
+        <RadioButton
+            android:id="@+id/rb_smartservice"
+            style="@style/bottom_style"
+            android:drawableTop="@drawable/bottom_smartservice_selector"
+            android:text="@string/app_three" />
+
+        <RadioButton
+            android:id="@+id/rb_govaffairs"
+            style="@style/bottom_style"
+            android:drawableTop="@drawable/bottom_govaffairs_selector"
+            android:text="@string/app_four" />
+
+        <RadioButton
+            android:id="@+id/rb_settings"
+            style="@style/bottom_style"
+            android:drawableTop="@drawable/bottom_settings_selector"
+            android:text="@string/app_five" />
+
+    </RadioGroup>
+
+</LinearLayout>

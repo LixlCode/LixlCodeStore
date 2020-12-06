@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:weightSum="4">
+    <include
+        android:id="@+id/tools_item_1"
+        layout="@layout/home_common_item"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:layout_gravity="top"
+        android:layout_weight="1"/>
+
+    <include
+        android:id="@+id/tools_item_2"
+        layout="@layout/home_common_item"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:layout_weight="1"
+        android:layout_gravity="top"
+        android:visibility="invisible"/>
+
+    <include
+        android:id="@+id/tools_item_3"
+        layout="@layout/home_common_item"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:layout_weight="1"
+        android:layout_gravity="top"
+        android:visibility="invisible"/>
+
+    <include
+        android:id="@+id/tools_item_4"
+        layout="@layout/home_common_item"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:layout_weight="1"
+        android:layout_gravity="top"
+        android:visibility="invisible"/>
+</LinearLayout>

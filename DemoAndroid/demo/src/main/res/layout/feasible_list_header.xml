@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="180dp">
+
+    </android.support.v4.view.ViewPager>
+
+    <!-- 文本和点的布局 -->
+    <!-- layout_alignBottom : 和某个控件底部对齐 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/viewpager"
+        android:background="#55000000"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <!-- 文本 -->
+        <TextView
+            android:id="@+id/viewpager_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="测试文本"
+            android:textColor="#FFFFFF" />
+
+        <!-- 点 -->
+        <LinearLayout
+            android:id="@+id/ll_dot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

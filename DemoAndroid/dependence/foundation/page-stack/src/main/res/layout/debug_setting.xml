@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <TextView android:id="@+id/show_page_name"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:textSize="10dp"
+              android:singleLine="true"
+              android:textColor="#f00"
+              android:textStyle="bold"/>
+
+    <TextView android:id="@+id/show_page_velocity"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:textSize="10dp"
+              android:singleLine="true"
+              android:textColor="#00f"
+              android:textStyle="bold"/>
+
+</LinearLayout>

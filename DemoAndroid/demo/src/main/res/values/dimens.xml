@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="user_center_group_margin">8dp</dimen>
+    <dimen name="user_center_list_item_double">65dp</dimen>
+    <dimen name="user_center_list_item_single">55dp</dimen>
+
+</resources>

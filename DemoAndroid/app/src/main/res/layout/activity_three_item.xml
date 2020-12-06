@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.wecome.demoandroid.view.SwipeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/sl_swipeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+
+        <!--<TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="#9e9e9e"
+            android:gravity="center"
+            android:paddingLeft="3dp"
+            android:paddingRight="3dp"
+            android:text="置顶"
+            android:textColor="#fff"
+            android:textSize="18sp" />-->
+
+        <TextView
+            android:id="@+id/tv_notice_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="#f00"
+            android:gravity="center"
+            android:paddingLeft="3dp"
+            android:paddingRight="3dp"
+            android:text="删除"
+            android:textColor="#fff"
+            android:textSize="18sp"
+            android:padding="8dp"/>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/ll_tag"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="6dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@mipmap/ic_launcher" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:text="系统公告"
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:id="@+id/tv_notice_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="2017/10/26 10:21:21" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ll_tag"
+            android:orientation="vertical"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp">
+
+            <TextView
+                android:id="@+id/tv_notice_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="系统公告的标题"
+                android:textColor="@color/black"/>
+
+            <com.wecome.demoandroid.view.foldview.MoreLineTextView
+                android:id="@+id/tvf_notice_des"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:padding="@dimen/padding_small"
+                app:clickAll="true"
+                app:textColor="@color/red"/>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray"
+                android:layout_marginTop="12dp"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_unread_msg_dot"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:background="@drawable/unread_message_shape"
+            android:layout_marginLeft="38dp"
+            android:layout_marginRight="38dp"
+            android:layout_marginTop="12dp" />
+
+    </RelativeLayout>
+</com.wecome.demoandroid.view.SwipeLayout>

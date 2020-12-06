@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/iv_first_head"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:src="@mipmap/ic_bg"
+        android:scaleType="fitXY"/>
+
+    <View
+        android:id="@+id/iv_line"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="#f2f2f2"
+        android:layout_below="@+id/iv_first_head"/>
+
+    <com.wecome.demo.view.IndexInvalidViewPager
+        android:id="@+id/vp_view_pager_1"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_below="@+id/iv_line"
+        android:background="#f2f2f2"/>
+
+    <View
+        android:id="@+id/divider_line9"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_below="@+id/vp_view_pager_1"
+        android:background="#f2f2f2" />
+
+</RelativeLayout>
